@@ -1,0 +1,31 @@
+@use '../../assets/css/config' as *; 
+
+.block--formal {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $c--ocean-blue;
+        z-index: 1;
+    }
+    &:after {
+        content: 'Formal';
+        font-size: 22px;
+        line-height: 1.4;
+        font-weight: 700;
+        font-family: $f--heading;
+        color: $c--white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 2;
+    }
+}

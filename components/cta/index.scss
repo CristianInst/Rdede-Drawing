@@ -1,0 +1,38 @@
+@use '../../assets/css/config' as *; 
+
+.cta--holder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 96px;
+
+    @media (max-width: 992px){
+        padding-top: 5vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.component--cta {
+    // font-size: 1.4rem;
+    margin-right: 48px;
+
+    &:last-of-type { margin-right: 0; }
+
+    @media (max-width: 992px){
+        margin-right: 0;
+        margin: 0 0 12px;
+    }
+
+    i {
+        // font-size: 1rem;
+        margin: 0 0 0 12px;
+    }
+
+    span {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}

@@ -1,0 +1,184 @@
+@use '../config' as *;
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+    position: relative;
+
+    &:not(.button):not(.component--cta):not(.menu-link){
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 0;
+            height: 1px;
+            width: 100%;
+            max-width: 100%;
+            animation-duration: 0.75s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        &:hover:after {
+            animation-name: slideAcross;
+        }
+    }
+}
+
+@keyframes slideAcross {
+    0% {
+        left: 0;
+        max-width: 100%;
+    }
+    50% {
+        left: 100%;
+        max-width: 0; 
+    }
+    51% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+        max-width: 100%;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: $f--heading; 
+    font-weight:800;
+    line-height: 1.2;
+}
+
+p, li, span, small, a, blockquote, td, address { 
+    font-family: $f--body;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4.8rem;
+    margin-bottom: 36px;
+
+    @media (max-width: 768px){
+        font-size: 8vw;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 568px){
+        font-size: 8vw;
+    }
+}
+
+h2 { 
+    font-size: 3.8rem; 
+    margin-bottom: 24px;
+
+    @media (max-width: 768px){
+        font-size: 4.8vw;
+        line-height: 1.6;
+    }
+    @media (max-width: 568px){
+        font-size: 6vw;
+    }
+}
+
+h3 {
+    font-size: 3.2rem;
+    margin-bottom: 12px; 
+    line-height: 1.4;
+    
+    @media (max-width: 768px){
+        font-size: 4vw;
+    }  
+    @media (max-width: 568px){
+        font-size: 5vw;
+    }    
+}
+
+h4, h5, h6 { 
+    font-size: 1.8rem; 
+    margin-bottom: 12px;
+}
+
+p + h2,
+p + h3,
+p + h4,
+ul + h2,
+ul + h3,
+ul + h4 {
+    margin-top: 36px;
+}
+
+p, li, a, span, blockquote, address {
+    font-size: 1.8rem;    
+    margin-bottom: 12px;
+    color: $c--dark-grey;
+
+    @media (max-width: 568px){
+        font-size: 4vw;
+    }
+}
+i { font-size: 1.6rem; }
+
+address { 
+    display: inline-flex;
+    text-align: left; 
+}
+
+small {
+    font-size: 1.2rem;
+}
+
+ul, ol {
+    margin: 24px 24px;
+}
+
+.page-content a {
+    text-decoration: underline;
+    color: rgba($c--black, 0.8);
+
+    &:hover {
+        color: rgba($c--black, 1);
+    }
+}
+
+figure.wp-block-image {
+    margin: 36px 0;
+    display: table;
+
+    figcaption {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        display: table-caption;
+        caption-side: bottom;
+        padding: 12px 6px;
+        background-color: rgba($c--black, 0.1);
+        color: rgba($c--black, 0.6);
+        margin: 0;
+    }
+}
+
+small {
+    * {
+        font-size: inherit;
+        line-height: inherit;
+    }
+    a {
+        display: inline-flex;
+        flex-direction: column;
+        text-decoration: none;
+        margin: 0;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgba($c--black, 0.2);
+            display: inline-block;
+            transition: all 0.15s ease-out;
+        }
+
+        // &:hover:after { background-color: $c--blue; }
+    }
+}

@@ -1,0 +1,128 @@
+@use '../../assets/css/config' as *; 
+
+.block--hero {
+    padding: 168px 0 384px;
+    background-size: cover;
+    background-color: $c--platinum;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $c--white;
+    margin: 0 0 36px;
+    position: relative;
+
+    @media (max-width: 992px){
+        padding: 120px 0 96px;
+    }
+
+    * { color: inherit; }
+
+    p {
+        max-width: 560px;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .component--flair {
+        position: absolute;
+        top: 100%;
+        right: 48px;
+
+        @media (max-width: 992px){
+            right: 0;
+        }
+    }
+
+    .cta--holder {
+        margin-top: 20px;
+        padding-top: 20px;
+        display: block; 
+
+        a {
+            display: block;
+        }
+    }
+
+    .component--cta {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: all 0.25s ease;
+        padding: 6px 0;
+        opacity: 1;
+
+        i {
+            bottom: 0;
+            position: relative;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            font-size: 1rem;
+        }
+
+        &:hover {
+            color: inherit;
+            opacity: 0.8;
+
+            i[class*="down"] { animation-name: $a--roll-down; }
+            i[class*="right"] { animation-name: $a--roll-right; }
+        }
+        
+        // span {
+        //     position: relative;
+        //     z-index: 3;
+        // }
+
+        // &:before, &:after {
+        //     content: '';
+        //     position: absolute;
+        //     transition: all 0.25s ease;
+        //     opacity: 0;
+        //     pointer-events: none;
+        //     height: 100%;
+        // }
+
+        // &:before {
+        //     left: 0;
+        //     top: -6px;
+        //     width: calc(100% + 24px);
+        //     background-color: $c--platinum;
+        //     z-index: 2;
+        // }
+        // &:after {
+        //     z-index: 1;
+        //     background-color: $c--ocean-blue;
+        //     left: -24px;
+        //     top: 12px;
+        //     width: calc(100% + 24px);
+        // }
+
+        // &:hover {
+        //     color: $c--ocean-blue;
+        //     &:before, &:after { opacity: 1; }
+        //     &:before {
+        //         left: -12px;
+        //         top: 0;
+        //     }
+        //     &:after {
+        //         left: -18px;
+        //         top: 6px;
+        //     }
+        // }
+    }
+
+    h1{
+      
+       
+        font-size: 100px;
+        text-align: left;
+    }
+
+    h4{
+      
+        font-weight: 600;
+        font-size: 30px;
+        text-align: left;
+        text-decoration: underline rgb(15, 194, 15) ; 
+    }
+}

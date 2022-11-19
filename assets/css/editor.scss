@@ -1,0 +1,6 @@
+@use 'blocks/formal/editor' as formal-editor;
+@use 'blocks/media/editor' as media-editor;
+@use 'blocks/listing/editor' as listing-editor;
+@use 'blocks/content/editor' as content-editor;
+@use 'blocks/breadcrumbs/editor' as breadcrumbs-editor;
+@use 'blocks/hero/editor' as hero-editor;

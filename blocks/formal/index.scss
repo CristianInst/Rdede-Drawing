@@ -1,0 +1,36 @@
+@use '../../assets/css/config' as *; 
+
+.block--formal {
+    padding: 96px 0;
+
+    h2 {
+        color: $c--ocean-blue;
+        margin: 0 0 12px;
+    }
+
+    p + h2 {
+        margin-top: 72px;
+    }
+    
+
+    a {
+        color: $c--ocean-blue;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul.links {
+        list-style-type: none;
+        position: sticky;
+        top: 200px;
+        
+        li {
+            margin: 0;
+        }
+        a { font-family: $f--heading; }
+    }
+
+}

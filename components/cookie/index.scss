@@ -1,0 +1,123 @@
+@use 'config' as *;
+
+#cookie {
+    background-color: $c--white;
+    position: fixed;
+    z-index: 10;
+    right: 24px;
+    bottom: 24px;
+    width: auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba($c--black,0.3);
+    -moz-box-shadow: 0px 0px 12px 0px rgba($c--black,0.3);
+    box-shadow: 0px 0px 12px 0px rgba($c--black,0.3);
+    border-radius: 6px;
+    backdrop-filter: blur(2px);
+
+    @media (max-width: 768px){
+        // left: 0;
+        // width: 100%;
+        // flex-direction: column;
+        // align-items: flex-start;
+    }
+
+    &.pending {
+        opacity: 0;
+        bottom: 24px;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-name: C_slideup;
+        @media (max-width: 768px){ animation-name: C_M_slideup; }
+    }
+
+    &.accepted {
+        opacity: 1;
+        bottom: 24px;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-name: C_slidedown;
+        @media (max-width: 768px){ animation-name: C_M_slidedown; }
+    }
+
+    button {
+        border-radius: 50%;
+        padding: 6px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $c--ocean-blue;
+            color: $c--white;
+        }
+    }
+
+    p, button { margin: 0; }
+    p {
+        font-size: 1.2rem;
+        padding: 0 24px 0 0;
+        display: inline-block;
+        color: $c--ocean-blue;
+
+        a {
+            font-size: inherit;
+            line-height: inherit;
+            color: $c--ocean-blue;
+            &:after { background-color: $c--ocean-blue; }
+        }
+    }
+
+    button.has-icon i {
+        font-size: 1.6rem;
+        line-height: 1;
+        margin: 0 2px;
+    }
+}
+
+@keyframes C_slideup {
+    from {
+        opacity: 0;
+        bottom: -12px;
+    }
+    to {
+        opacity: 1;
+        bottom: 24px;
+    }
+}
+    @keyframes C_M_slideup {
+        from {
+            opacity: 0;
+            bottom: -12px;
+        }
+        to {
+            opacity: 1;
+            bottom: 24px;
+        }
+    }
+
+@keyframes C_slidedown {
+    from {
+        opacity: 1;
+        bottom: 24px;
+    }
+    to {
+        opacity: 0;
+        bottom: -12px;
+    }
+}
+    @keyframes C_M_slidedown {
+        from {
+            opacity: 1;
+            bottom: 0px;
+        }
+        to {
+            opacity: 0;
+            bottom: -12px;
+        }
+    }

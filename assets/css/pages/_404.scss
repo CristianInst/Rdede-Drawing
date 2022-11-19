@@ -1,0 +1,58 @@
+@use '../config' as *;
+
+.error404 {
+    background-color: $c--white;
+    color: $c--ocean-blue;
+
+    * { color: inherit; }
+
+    header, footer { display: none; }
+    img {
+        margin-bottom: 24px;
+    }
+    p + a {
+        display: inline-block;
+        margin-top: 60px;
+    }
+
+    h1 {
+        color: $c--ocean-blue;
+        margin: 0 0 24px;
+    }
+    
+    .component--cta {
+        padding: 4px 0;
+
+        i {
+            bottom: 0;
+            position: relative;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        &:hover {
+            color: inherit;
+
+            i[class*="down"] { animation-name: $a--roll-down; }
+            i[class*="right"] { animation-name: $a--roll-right; }
+        }
+    }
+}
+
+.page-not-found {
+    height: 100vh;
+    margin: 0!important;
+    overflow: hidden;
+
+    img {
+        max-width: 120px;
+    }
+
+    .container {
+        position: relative;
+        top: 40%;
+        transform: translateY(-40%);
+    }
+}

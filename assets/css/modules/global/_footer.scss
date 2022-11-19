@@ -1,0 +1,140 @@
+@use 'config' as *;
+
+footer {
+    background-color: #E2E2E2;
+    padding: 80px 0;
+    text-align: center;
+    
+
+    @media (max-width: 992px){
+        padding: 60px 0;
+    }
+
+}
+
+
+
+
+.menu-footer-container {
+
+    ul {
+        padding:0 0 36px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        padding: 0 12px;
+        margin: 0;
+        height: 22px;
+        border-left: 2px solid rgba(255, 0, 0, 0.733);
+        font-size: 1.2rem;
+        &:first-child {
+            border-left: 0px;
+        }
+    }
+
+    a {
+        line-height: 1.2;
+        font-size: 2rem;
+        margin-bottom: 0;
+        font-weight: 600;
+    
+        &:hover {
+            &:hover{
+                color: #1A8FD6;
+            }   
+        }
+    }
+  
+
+
+}
+ 
+
+
+
+.social-media{
+    display: block;
+    list-style-type: none;
+    width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    text-align: center;
+
+        li {
+            display: inline-block;  
+            margin: 10px;
+            padding-bottom: 20px;
+        } 
+        .fa-facebook-square{
+            color: #344F87;
+            font-size: 30px;
+            &:hover {
+                color: rgb(55, 124, 226);
+            }
+        }
+        .fa-twitter{
+            color: #1A8FD6;
+            font-size: 30px;
+            &:hover {
+                color: rgb(55, 124, 226);
+            }
+        }
+        .fa-instagram{
+            color: #B84048;
+            font-size: 30px;
+            &:hover {
+                color: #fa0011;
+            }
+        }
+}
+
+
+
+
+
+.credits{
+
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 2px;
+            margin: 0;
+            font-size: 1.2rem;
+            border-left: 2px solid rgba(255, 0, 0, 0.425);
+        
+    
+            &:first-child {
+                border-left: 0px;
+            }
+
+            a{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0px 10px;
+                color: rgba(0, 0, 0, 0.596);
+
+                &:hover{
+                    color: #1A8FD6;
+                }    
+
+            }
+    
+        }
+    }
+
+  
+  
+}

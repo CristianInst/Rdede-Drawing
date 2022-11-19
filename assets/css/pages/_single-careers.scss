@@ -1,0 +1,53 @@
+@use '../config' as *;
+
+.single-careers {
+
+    .component--brand-colophon {
+        height: 184px;
+        width: 184px;
+        margin: 0 0 60px;
+    }
+
+
+
+    aside {
+
+        .brand--image {
+            img { width: 100%; }
+        }
+
+        .brand--content {
+            padding: 60px 48px;
+
+            * {
+                color: inherit; 
+            }
+        }
+
+    }
+
+    h1 {
+        width: 100%;
+        border-bottom: 1px solid $c--ocean-blue;
+        padding: 0 0 24px;
+        margin: 0 0 60px;
+    }
+
+    h4 {
+        font-size: 2rem;
+        opacity: 0.8;
+    }
+
+    .the--role {
+        padding: 96px 0;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    a.button {
+        margin-top: 36px;
+    }
+
+}

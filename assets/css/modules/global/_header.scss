@@ -1,0 +1,32 @@
+@use 'config' as *;
+
+#wpadminbar {
+    @media (max-width: 992px){
+        display: none !important;
+    }
+}
+
+
+
+.logo {
+    height: 125px;
+    padding: 30px;
+}
+
+.header-options {
+    background-color: white;
+    padding: 20px;
+    text-align: right;
+    i{
+        color: red;
+        font-size: 30px;
+        padding: 0 12px;
+    }
+    i ~ a {
+        padding-right: 20px;
+        padding-top: 6px;
+        font-weight: 600;
+        height: 30px;
+    }
+}
+

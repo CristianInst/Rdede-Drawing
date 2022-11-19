@@ -1,0 +1,79 @@
+@use '../../assets/css/config' as *; 
+
+.single-career .block--breadcrumbs {
+    padding-bottom: 144px;
+}
+
+.block--hero + .block--breadcrumbs {
+    margin-top: -24px;
+}
+
+.block--breadcrumbs {
+    padding: 26px 0 22px;
+    color: rgba($c--ocean-blue, 0.5);
+    margin-bottom: 0;
+    // position: sticky;
+    top: 132px;
+    background-color: rgba($c--white, 0.8);
+    z-index: 4;
+
+    @media (max-width: 992px){
+        min-height: 30px;
+        padding: 0;
+    }
+
+    span, i {
+        @media (max-width: 992px){
+          display: none;
+        }
+    }
+
+    a, span, p { color: inherit; }
+
+    a {
+        margin-right: 6px;
+        padding: 0;
+        margin: 0;
+
+        &:hover { color: $c--ocean-blue; }
+    }
+    span.breadcrumb_last {
+        margin-left: 6px;
+    }
+
+    p {
+        margin: 0;
+
+        &#breadcrumbs {
+            a {
+                margin-right: 6px;
+
+                + span { margin-left: 6px; }
+            }
+        }
+    }
+
+    .breadcrumb-menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 12px;
+        padding: 0 6px;
+    
+        a {
+            padding: 0;
+            
+            &:hover { opacity: 0.6; }
+        }
+    }
+
+    i.fa-share-nodes {
+        font-size: 1.8rem;
+        margin-left: 12px;
+        cursor: pointer;
+    }
+}

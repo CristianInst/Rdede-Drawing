@@ -1,0 +1,160 @@
+@use '../config' as *;
+
+/* MENUS */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+
+    li {
+        display: inline-block;
+        margin: 0 12px;
+     
+       
+
+        &:first-of-type { margin-left: 0; }
+        &:last-of-type { margin-right: 0; }
+    }
+    a{
+        font-size: 24px;
+        font-weight: 800;
+        &:hover{
+            color:  #1A8FD6;
+        }
+    }
+}
+
+
+/* Social links */
+.social-links a:hover {
+    color: rgba($c--black, 0.6);
+}
+
+
+/* Button */
+button, .button {
+    border: 1px solid;
+    border-radius: 0;
+    padding: 10px 20px;
+    text-align: right;
+    background-color: red;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-family: $f--heading;
+    text-decoration: none !important;
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    font-weight: 800;
+    user-select: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    &[disabled] {
+        background-color: $c--light-grey !important;
+        border-color: $c--light-grey !important;
+        color: darken($c--light-grey, 20) !important;
+    }
+
+    @media (max-width: 768px){
+        font-size: 1.4rem;
+    }
+
+    &:hover, &:focus, &:active { 
+        outline: none;
+        color: inherit;
+
+    }
+
+    &.has-icon {
+        text-align: left;
+        display: inline-flex;
+        align-items: center;
+
+        i { 
+            display: inline-block;
+            margin: 0 0 0 36px;
+            color: inherit; 
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+
+        &.c--ocean-blue {
+            color: $c--ocean-blue;
+            border-color: $c--ocean-blue;
+        }
+    }
+    
+    &.fill {
+        &.c--ocean-blue {
+            background-color: $c--ocean-blue;
+            color: $c--white;
+        }
+    }
+
+
+    
+}
+
+.bg--ocean-blue { background-color: $c--ocean-blue; color: $c--white; * { color: inherit; } }
+.bg--platinum { background-color: $c--platinum; }
+
+
+/* Section animation */
+// @media (min-width: 992px){
+//     main {
+//         section { opacity: 0; transition: opacity 0.3s 0.2s ease; }
+//         section.is-visible { opacity: 1; }
+//     }
+// }
+
+
+
+
+/* BREAKOUT CONTAINER */
+.break-out {
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+
+.wp-block-columns {
+    @extend .container !optional;
+}
+
+
+
+
+// FORM
+form {
+    .inputWrapper {
+        display: block;
+        width: 100%;
+        padding-bottom: 24px;
+    }
+}
+
+
+
+
+// ITC GO Back
+
+    .goBack {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $c--ocean-blue;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        i {
+            font-size: 1.2rem;
+            margin: 0 12px 0 0;
+        }
+    }

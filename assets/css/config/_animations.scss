@@ -1,0 +1,26 @@
+$roll-down: rollDown;
+$roll-right: rollRight;
+
+@keyframes rollDown {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -4px;
+    }
+}
+
+@keyframes rollRight {
+    0% {
+        right: 0;
+    }
+    50% {
+        right: 0;
+    }
+    100% {
+        right: -4px;
+    }
+}
