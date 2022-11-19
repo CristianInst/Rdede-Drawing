@@ -1,5 +1,5 @@
 # Janus
-Authenticity WordPress Master theme for Janus
+Authenticity WordPress Master theme for Rdede-Drawing
 
 ## GULP Setup
 Run the following commands in terminal when you're in the this theme's directory:
