@@ -1,35 +1,13 @@
 {
-  "name": "itc-group",
-  "version": "1.0.0",
-  "description": "Bespoke WordPress theme for ITC UK",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "@babel/core": "^7.17.4",
-    "@babel/preset-env": "^7.16.11",
-    "file-system": "^2.2.2",
-    "gulp": "^4.0.2",
+  "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.37.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Authenticity-Digital/ITC-Group.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Authenticity-Digital/ITC-Group/issues"
-  },
-  "homepage": "https://github.com/Authenticity-Digital/ITC-Group#readme",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "browser-sync": "^2.27.7"
+    "sass": "^1.56.1"
   }
 }
