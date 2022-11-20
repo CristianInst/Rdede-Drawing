@@ -1,4 +1,4 @@
-# Janus
+# Rdede-Drawing
 Authenticity WordPress Master theme for Rdede-Drawing
 
 ## GULP Setup
